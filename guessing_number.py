@@ -30,5 +30,3 @@ num_to_guess = random.randint(1,10)
 while not guess_number(num_to_guess):
     continue
     
-    
-    
