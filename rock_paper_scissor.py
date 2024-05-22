@@ -18,9 +18,15 @@ def play():
         print(f"You took {ATTEMPT} attempts")
         winner = True
     else:
-        ATTEMPT +=1
-        print("You lose")
-        winner = False
+        
+        if bot_guess ==user_guess:
+            winner = False
+            print("Draw")
+        else:
+            ATTEMPT +=1
+            print("You lose")
+            print(f"Your guess was {user_guess} and bot guess was {bot_guess}")
+            winner = False
     return winner
 
 while not play():
